@@ -1,9 +1,9 @@
 import { PluginModule } from "paella-core";
 import packageData from "../../package.json";
 
-export default class BasicPluginsModule extends PluginModule {
+export default class LayoutPluginsModule extends PluginModule {
     get moduleName() {
-        return "paella-basic-plugins";
+        return "paella-layout-plugins";
     }
 
     get moduleVersion() {

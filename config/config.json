@@ -23,11 +23,19 @@
             ]
         },
         "es.upv.paella.dualVideo": {
-            "enabled": true,
+            "enabled": false,
             "validContent": [
                 { "id": "presenter-presentation", "content": ["presenter","presentation"], "icon": "present-mode-3.svg", "title": "Presenter and presentation" },
                 { "id": "presenter-2-presentation", "content": ["presenter-2","presentation"], "icon": "present-mode-3.svg", "title": "Presenter and presentation" },
                 { "id": "presenter-presenter-2", "content": ["presenter","presenter-2"], "icon": "present-mode-3.svg", "title": "Presenter and presentation" }
+            ]
+        },
+        "es.upv.paella.dualVideoSideBySide": {
+            "enabled": true,
+            "validContent": [
+                { "id": "presenter-presentation", "content": ["presentation","presenter"], "icon": "present-mode-3.svg", "title": "Presenter and presentation" },
+                { "id": "presenter-2-presentation", "content": ["presentation","presenter-2"], "icon": "present-mode-3.svg", "title": "Presenter and presentation" },
+                { "id": "presenter-presenter-2", "content": ["presenter-2","presenter"], "icon": "present-mode-3.svg", "title": "Presenter and presentation" }
             ]
         },
         "es.upv.paella.tripleVideo": {

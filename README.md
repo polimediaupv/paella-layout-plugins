@@ -24,8 +24,7 @@ let paella = new Paella('player-container', {
         ...
         "es.upv.paella.dualVideoSideBySide": {
             "enabled": true,
-            "side": "right",
-            "order": 0
+            ...
         }
         ... other plugin settings
     }
@@ -38,22 +37,51 @@ let paella = new Paella('player-container', {
 
 An alternative layout plugin to the official one, which allows to display videos side by side with different sizes.
 
+The `cookieType` attribute is used to configure the type of cookie we want to use to save the last layout configuration, and must match one of the values defined in the cookieConsent configuration. For more information, see the [documentation on cookie consent](https://paellaplayer.upv.es/#/doc/cookie_consent.md).
+
+The `validContent` attribute specifies which streams will be accepted for the layout. For more information on configuring video layouts, see [the official `paella-core` documentation](https://paellaplayer.upv.es/#/doc/video_layout.md).
+
 ```json
 {
     "plugins": {
         "es.upv.paella.dualVideoSideBySide": {
             "enabled": true,
             "side": "right",
-            "order": 2
+            "cookieType": "preferences",
+            "order": 0,
+            "side": "right",
+            "order": 0,
+            "validContent": [
+                { 
+                    "id": "presenter-presentation", 
+                    "content": ["presenter","presentation"], 
+                    "icon": "present-mode-3.svg", 
+                    "title": "Presenter and presentation"
+                },
+                {
+                    "id": "presenter-2-presentation",
+                    "content": ["presenter-2","presentation"],
+                    "icon": "present-mode-3.svg",
+                    "title": "Presenter and presentation"
+                },
+                {
+                    "id": "presenter-presenter-2",
+                    "content": ["presenter","presenter-2"],
+                    "icon": "present-mode-3.svg",
+                    "title": "Presenter and presentation"
+                }
+            ]
         }...
     }
 }
 ```
 
-**Exported as** `DualVideoSideBySidePlugin`.
+**Exported as** `DualVideoSideBySideLayoutPlugin`.
 
 **Icon customization data:**
 
 - Plugin identifier: `es.upv.paella.dualVideoSideBySide`
 - Icon names:
-    
+    * `iconMinimize`
+    * `iconMaximize`
+    * `iconClose`
