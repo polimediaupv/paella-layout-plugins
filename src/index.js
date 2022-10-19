@@ -1,4 +1,3 @@
-import dictionaries from './dictionaries';
 
 import DualVideoSideBySideLayout from './plugins/es.upv.paella.dualVideoSideBySide';
 

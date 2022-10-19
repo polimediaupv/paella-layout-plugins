@@ -235,12 +235,12 @@ export default class DualVideoSideBySideLayout extends VideoLayout {
     }
 
     async getDictionaries() {
-        const dict = {
-            es: {
-                "Swap between side by side and minimized video": "Cambiar la disposición de los dos vídeos entre minimizado y del mismo tamaño",
-                "Swap the position of the videos": "Intercambiar la posición de los vídeos"
+        return {
+            "es": {
+                "Maximize video": "Maximizar vídeo",
+                "Minimize video": "Minimizar vídeo",
+                "Close video": "Cerrar vídeo"
             }
-        };
-        return dict;
+        }
     }
 }
