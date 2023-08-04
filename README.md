@@ -4,6 +4,8 @@
 
 **Step 1:** Import the plugin context and add it to the Paella Player initialization parameters:
 
+Using plugin context API:
+
 ```javascript
 ...
 import getBasicPluginsContext from 'paella-layout-plugins';
@@ -11,6 +13,22 @@ import getBasicPluginsContext from 'paella-layout-plugins';
 let paella = new Paella('player-container', {
     customPluginContext: [
         getBasicPluginsContext()
+    ]
+});
+...
+```
+
+Using explicit plugin import API (paella-layout-plugins >= 1.41):
+
+```javascript
+...
+import {
+    layoutPlugins
+} from 'paella-layout-plugins';
+
+let paella = new Paella('player-container', {
+    plugins: [
+        ...layoutPlugins
     ]
 });
 ...
@@ -46,11 +64,8 @@ The `validContent` attribute specifies which streams will be accepted for the la
     "plugins": {
         "es.upv.paella.dualVideoSideBySide": {
             "enabled": true,
-            "side": "right",
-            "cookieType": "preferences",
             "order": 0,
             "side": "right",
-            "order": 0,
             "validContent": [
                 { 
                     "id": "presenter-presentation", 
@@ -71,7 +86,8 @@ The `validContent` attribute specifies which streams will be accepted for the la
                     "title": "Presenter and presentation"
                 }
             ]
-        }...
+        },
+        ...
     }
 }
 ```

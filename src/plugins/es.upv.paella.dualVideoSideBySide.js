@@ -4,12 +4,14 @@ import {
     CanvasButtonPosition
 } from 'paella-core';
 
+import LayoutPluginsModule from './LayoutPluginsModule';
+
 
 import defaultIconMinimize from '../icons/minimize.svg';
 import defaultIconMaximize from '../icons/maximize.svg';
 import defaultIconClose from '../icons/close.svg';
 
-const { getCookie, setCookieIfAllowed } = utils;
+const { getCookie, setCookieIfAllowed } = utils;
 
 const layouts = {
     // First layout: side by side
@@ -120,6 +122,14 @@ function currentLayout(validContent) {
 }
 
 export default class DualVideoSideBySideLayout extends VideoLayout {
+    getPluginModuleInstance() {
+        return LayoutPluginsModule.Get();
+    }
+
+    get name() {
+        return super.name || "es.upv.paella.dualVideoSideBySide";
+    }
+
     get identifier() { return "dual-video-ethz"; }
 
     async load() {

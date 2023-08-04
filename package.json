@@ -1,6 +1,6 @@
 {
 	"name": "paella-layout-plugins",
-	"version": "1.8.0",
+	"version": "1.41.0",
 	"description": "Video Layout Plugins for Paella Player",
 	"main": "src/index.js",
 	"module": "dist/paella-layout-plugins.js",
@@ -33,6 +33,6 @@
 		"webpack-dev-server": "^4.7.3"
 	},
 	"dependencies": {
-		"paella-core": "^1.8.1"
+		"paella-core": "^1.41.0"
 	}
 }
