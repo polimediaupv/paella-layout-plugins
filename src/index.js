@@ -14,4 +14,6 @@ export const layoutPlugins = [
     }
 ]
 
+export const allPlugins = layoutPlugins;
+
 export const DualVideoSideBySideLayoutPlugin = DualVideoSideBySideLayout;

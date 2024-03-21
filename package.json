@@ -1,6 +1,6 @@
 {
 	"name": "paella-layout-plugins",
-	"version": "1.41.0",
+	"version": "1.41.1",
 	"description": "Video Layout Plugins for Paella Player",
 	"main": "src/index.js",
 	"module": "dist/paella-layout-plugins.js",
